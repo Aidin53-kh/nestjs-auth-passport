@@ -1,4 +1,4 @@
-import { Body, Controller, Post, Get } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { RegisterUserDto } from './dto';
 
@@ -6,7 +6,7 @@ import { RegisterUserDto } from './dto';
 export class AuthController {
     constructor(private authService: AuthService) {}
 
-    @Post('register')
+    @Post('register') 
     async registerUser(@Body() dto: RegisterUserDto) {
         return await this.authService.registerUser(dto);
     }
