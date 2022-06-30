@@ -31,4 +31,4 @@ COPY --from=builder /usr/src/app/dist/ ./dist/
 # Expose the web server's port.
 EXPOSE 3000
 
-# Run the application.
+# Run the application. 
